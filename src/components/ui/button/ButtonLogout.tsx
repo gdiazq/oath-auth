@@ -1,10 +1,8 @@
 import Logout from "@/actions/logout";
 import React from "react";
 import { Button } from "@nextui-org/react";
-import { useRouter } from 'next/navigation'
 
 const ButtonLogout = () => {
-    const router = useRouter()
     const onSubmit = async () => {
         Logout();
         setTimeout(() => {

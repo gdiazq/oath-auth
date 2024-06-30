@@ -46,7 +46,7 @@ export const FormSignUp = () => {
 
     return (
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(registerSubmit)} className="space-y-6">
+            <form method="POST" onSubmit={form.handleSubmit(registerSubmit)} className="space-y-6">
                 <div className="space-y-4">
                 <FormField
                     control={form.control}
