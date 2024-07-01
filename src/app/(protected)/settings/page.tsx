@@ -5,7 +5,7 @@ const SettingPage = async () => {
     const session = await auth();
     
     if (!session) {
-        return null; // or handle the null session case accordingly
+        return null;
     }
 
     return (
@@ -14,7 +14,16 @@ const SettingPage = async () => {
                 <h1 className="text-5xl font-semibold mb-4">Settings</h1>
                 <p className="text-gray-700 mb-4">You are logged in as:</p>
                 <div className="text-black p-4 rounded mb-4">
-                    {JSON.stringify(session.user, null, 2)}
+                    <table className="border-collapse border border-black w-full">
+                        <tbody>
+                            {Object.entries(session.user).map(([key, value]) => (
+                                <tr className="border border-black" key={key}>
+                                    <td className="border border-black p-2">{key}</td>
+                                    <td className="border border-black p-2">{JSON.stringify(value)}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
                 </div>
                 <form action={async () => {
                     "use server";
@@ -27,6 +36,9 @@ const SettingPage = async () => {
                         Sign out
                     </Button>
                 </form>
+            </div>
+            <div className="pt-10">
+                <p className="text-xs text-white"><a href="/">Back to home</a></p>
             </div>
         </main>
     );
