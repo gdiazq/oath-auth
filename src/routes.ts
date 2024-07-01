@@ -35,3 +35,11 @@ export const apiAuthPrefix = "/api/auth";
  */
 
 export const DEFAULT_LOGIN_REDIRECT = "/settings";
+
+
+/**
+ * The default route to redirect to after a successful OAuth Login.
+ * @type {string}
+ */
+
+export const DEFAULT_OAUTH_LOGIN_REDIRECT = "/";

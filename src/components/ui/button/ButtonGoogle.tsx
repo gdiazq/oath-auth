@@ -4,12 +4,12 @@ import React from "react";
 import { Button } from "@nextui-org/react";
 import { signIn } from "next-auth/react";
 import GoogleIcon from "../icon/GoogleIcon";
-import { DEFAULT_LOGIN_REDIRECT } from "@/routes";
+import { DEFAULT_OAUTH_LOGIN_REDIRECT } from "@/routes";
 
 const ButtonGoogle = () => {
     const onClick = (provider: "google") => {
         signIn(provider, {
-            callbackUrl: DEFAULT_LOGIN_REDIRECT,
+            callbackUrl: DEFAULT_OAUTH_LOGIN_REDIRECT,
         })
     }
 
