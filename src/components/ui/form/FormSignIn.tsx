@@ -1,6 +1,7 @@
 'use client'
 
 import * as z from 'zod';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useSearchParams }  from 'next/navigation';
@@ -14,6 +15,7 @@ import { FormSuccess } from '@/components/ui/form/formSuccess';
 import { login } from '@/actions/login';
 
 export const FormSignIn = () => {
+    const router = useRouter();
     const searchParams = useSearchParams();
     const urlError = searchParams.get("error") === "OAuthAccountNotLinked"
         ? "Email already in use in other provider!"
@@ -42,6 +44,9 @@ export const FormSignIn = () => {
                 if (response?.success){
                     form.reset();
                     setSuccess(response.success);
+                    setTimeout(() => {
+                        router.push('/')
+                    }, 3000)
                 }
             })
             .catch(() => setError("Something went wrong!"));
