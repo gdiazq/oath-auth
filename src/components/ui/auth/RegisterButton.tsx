@@ -2,10 +2,8 @@
 
 import React from "react";
 import { Button } from "@nextui-org/react";
-import { useRouter } from "next/navigation";
 
 export const RegisterButton = () => {
-    const router = useRouter();
 
     return (
         <div className="mt-4">

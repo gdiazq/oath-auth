@@ -1,10 +1,9 @@
 'use client'
 
 import * as z from 'zod';
-import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useSearchParams }  from 'next/navigation';
+import { useSearchParams, useRouter }  from 'next/navigation';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/shadcn/form';
 import { LoginHotelSchema } from '@/schemas/signin';
@@ -44,9 +43,6 @@ export const FormSignIn = () => {
                 if (response?.success){
                     form.reset();
                     setSuccess(response.success);
-                    setTimeout(() => {
-                        router.push('/')
-                    }, 3000)
                 }
             })
             .catch(() => setError("Something went wrong!"));
@@ -93,8 +89,8 @@ export const FormSignIn = () => {
                         )}
                     />
                 </div>
-                <FormError message={error || urlError} />
                 <FormSuccess message={success}/>
+                <FormError message={error || urlError} />
                 <LoginButton />
             </form>
         </Form>
