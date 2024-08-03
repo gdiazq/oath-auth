@@ -1,6 +1,7 @@
 'use client'
 
 import { FormSignIn } from '@/components/ui/form/FormSignIn';
+import { Suspense } from 'react'
 import ButtonGoogle from '@/components/ui/button/ButtonGoogle';
 import ButtonFacebook from '@/components/ui/button/ButtonFacebook';
 import ButtonGithub from '@/components/ui/button/ButtonGithub';
@@ -16,7 +17,9 @@ const SignIn = () => {
                     Sign up for an account</a>
                 </p>
                 <div>
-                    <FormSignIn />
+                    <Suspense>
+                        <FormSignIn />
+                    </Suspense>
                 </div>
                 <p className="text-xs text-white">Or with</p>
                 <div className="flex flex-row gap-x-4">
