@@ -10,8 +10,8 @@ const SettingPage = async () => {
 
     return (
         <main className="flex flex-col w-full h-screen items-center justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-900">
-            <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full text-center">
-                <h1 className="text-5xl font-semibold mb-4">Settings</h1>
+            <div className="bg-white p-8 rounded-lg shadow-lg max-w-2xl text-center">
+                <h1 className="text-black text-5xl font-semibold mb-4">Settings</h1>
                 <p className="text-gray-700 mb-4">You are logged in as:</p>
                 <div className="text-black p-4 rounded mb-4">
                     <table className="border-collapse border border-black w-full">
