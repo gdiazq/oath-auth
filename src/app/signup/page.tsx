@@ -7,8 +7,8 @@ import ButtonGithub from '@/components/ui/button/ButtonGithub';
 
 const SignUp = () => {
   return (
-    <main className="flex flex-col w-full items-center justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-900">
-      <div className="space-y-6 py-24 text-center px-4">
+    <main className="flex flex-grow flex-col w-full min-h-screen items-center justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-900">
+      <div className="space-y-6 pt-12 pb-8 text-center px-4">
         <h1 className="text-5xl font-semibold text-white drop-shadow-md">
           🔐 Sign Up
         </h1>
@@ -34,7 +34,7 @@ const SignUp = () => {
           </form>
         </div>
       </div>
-      <div>
+      <div className="py-4">
         <p className="text-xs text-white"><a href="/">Volver al inicio</a></p>
       </div>
     </main>
