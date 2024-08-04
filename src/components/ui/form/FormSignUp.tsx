@@ -58,7 +58,7 @@ export const FormSignUp = () => {
                                 <Input
                                     type="text"
                                     placeholder="Jhon Doe"
-                                    className="max-w-xs mx-auto text-black"
+                                    className="max-w-xs mx-auto text-black dark:text-white"
                                     {...field}
                                 />
                             </FormControl>
@@ -76,7 +76,7 @@ export const FormSignUp = () => {
                                 <Input
                                     type="email"
                                     placeholder="email@example.com"
-                                    className="max-w-xs mx-auto text-black"
+                                    className="max-w-xs mx-auto text-black dark:text-white"
                                     {...field}
                                 />
                             </FormControl>
@@ -94,7 +94,7 @@ export const FormSignUp = () => {
                                 <Input
                                     type="password"
                                     placeholder="Enter your password"
-                                    className="max-w-xs mx-auto text-black"
+                                    className="max-w-xs mx-auto text-black dark:text-white"
                                     {...field}
                                 />
                             </FormControl>
@@ -112,7 +112,7 @@ export const FormSignUp = () => {
                                 <Input
                                     type="password"
                                     placeholder="Repeat your password"
-                                    className="max-w-xs pt-2 mx-auto text-black"
+                                    className="max-w-xs pt-2 mx-auto text-black dark:text-white"
                                     {...field}
                                 />
                             </FormControl>
