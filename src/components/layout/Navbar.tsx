@@ -16,7 +16,7 @@ const Navbar = () => {
             <ThemeSwitcher />
             { status === "authenticated" ? (
                 <>
-                    <span className="text-gray-600">Hello, {session.user?.name}</span>
+                    <span className="text-gray-600 dark:text-white">Hello, {session.user?.name}</span>
                     <ButtonLogout />
                 </>
             ) : status === "unauthenticated" ? (
