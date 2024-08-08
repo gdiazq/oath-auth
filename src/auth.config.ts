@@ -4,7 +4,6 @@ import { compare } from "bcryptjs"
 import { LoginHotelSchema } from "./schemas/signin"
 import Github from "next-auth/providers/github"
 import Google from "next-auth/providers/google"
-import Facebook from "next-auth/providers/facebook"
 import { getUserbyEmail } from "@/data/user"
 
 export default {
@@ -16,10 +15,6 @@ export default {
       Google({
         clientId: process.env.AUTH_GOOGLE_CLIENT_ID,
         clientSecret: process.env.AUTH_GOOGLE_CLIENT_SECRET,
-      }),
-      Facebook({
-        clientId: process.env.AUTH_FACEBOOK_CLIENT_ID,
-        clientSecret: process.env.AUTH_FACEBOOK_CLIENT_SECRET, 
       }),
       Credentials({
         async authorize(credentials) {
