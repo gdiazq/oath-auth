@@ -3,7 +3,6 @@
 import { FormSignIn } from '@/components/ui/form/FormSignIn';
 import { Suspense } from 'react'
 import ButtonGoogle from '@/components/ui/button/ButtonGoogle';
-import ButtonFacebook from '@/components/ui/button/ButtonFacebook';
 import ButtonGithub from '@/components/ui/button/ButtonGithub';
 
 const SignIn = () => {
@@ -26,10 +25,6 @@ const SignIn = () => {
                     <form action="/api/auth/google" method="POST">
                         <input type="hidden" name="auth-google" value="google" />
                         <ButtonGoogle/>
-                    </form>
-                    <form action="/api/auth/facebook" method="POST">
-                        <input type="hidden" name="auth-facebook" value="facebook" />
-                        <ButtonFacebook />
                     </form>
                     <form action="/api/auth/github" method="POST">
                         <input type="hidden" name="auth-github" value="github" />

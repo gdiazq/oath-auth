@@ -3,7 +3,7 @@
 import * as z from 'zod';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useSearchParams, useRouter }  from 'next/navigation';
+import { useSearchParams }  from 'next/navigation';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/shadcn/form';
 import { LoginHotelSchema } from '@/schemas/signin';
@@ -14,7 +14,6 @@ import { FormSuccess } from '@/components/ui/form/formSuccess';
 import { login } from '@/actions/login';
 
 export const FormSignIn = () => {
-    const router = useRouter();
     const searchParams = useSearchParams();
     const urlError = searchParams.get("error") === "OAuthAccountNotLinked"
         ? "Email already in use in other provider!"
