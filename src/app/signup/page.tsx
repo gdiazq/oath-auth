@@ -18,7 +18,7 @@ const SignUp = () => {
           <FormSignUp />
         </div>
         <p className="text-xs text-white">Or with</p>
-        <div className="flex flex-row gap-x-4">
+        <div className="flex flex-row justify-center gap-x-4">
           <form action="/api/auth/google" method="POST">
             <input type="hidden" name="auth-google" value="google" />
             <ButtonGoogle/>
