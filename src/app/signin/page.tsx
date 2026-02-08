@@ -22,14 +22,8 @@ const SignIn = () => {
                 </div>
                 <p className="text-xs text-white">Or with</p>
                 <div className="flex flex-row justify-center gap-x-4">
-                    <form action="/api/auth/google" method="POST">
-                        <input type="hidden" name="auth-google" value="google" />
-                        <ButtonGoogle/>
-                    </form>
-                    <form action="/api/auth/github" method="POST">
-                        <input type="hidden" name="auth-github" value="github" />
-                        <ButtonGithub />
-                    </form>
+                    <ButtonGoogle/>
+                    <ButtonGithub />
                 </div>
             </div>
             <div>

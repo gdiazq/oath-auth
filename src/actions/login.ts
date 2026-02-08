@@ -20,7 +20,6 @@ export const login = async (values: z.infer<typeof LoginHotelSchema>) => {
             password,
             redirectTo: DEFAULT_LOGIN_REDIRECT,
         });
-        console.log(signIn)
     } catch (error) {
         if (error instanceof AuthError) {
             switch (error.type) {

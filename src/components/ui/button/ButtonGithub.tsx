@@ -14,7 +14,7 @@ const ButtonGithub = () => {
     }
 
     return (
-        <Button className="bg-white text-black" onClick={() => onClick("github")}>
+        <Button className="bg-white text-black" onPress={() => onClick("github")}>
             <GithubIcon />
             Github
         </Button>

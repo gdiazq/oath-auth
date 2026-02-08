@@ -14,7 +14,7 @@ const ButtonGoogle = () => {
     }
 
     return (
-        <Button className="bg-white text-black" onClick={ () => onClick("google")}>
+        <Button className="bg-white text-black" onPress={ () => onClick("google")}>
             <GoogleIcon />
             Google
         </Button>

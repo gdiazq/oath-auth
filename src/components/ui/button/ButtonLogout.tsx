@@ -1,17 +1,15 @@
-import Logout from "@/actions/logout";
-import React from "react";
+"use client";
+
+import { signOut } from "next-auth/react";
 import { Button } from "@nextui-org/react";
 
 const ButtonLogout = () => {
     const onSubmit = async () => {
-        Logout();
-        setTimeout(() => {
-            window.location.href = '/';
-        }, 3000);
+        await signOut({ callbackUrl: "/" });
     };
 
     return (
-        <Button className="bg-red-700 text-white" type="submit" onClick={onSubmit}>
+        <Button className="bg-red-700 text-white" type="submit" onPress={onSubmit}>
             Logout
         </Button>
     );

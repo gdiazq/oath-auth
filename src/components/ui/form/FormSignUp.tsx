@@ -57,7 +57,7 @@ export const FormSignUp = () => {
                             <FormControl>
                                 <Input
                                     type="text"
-                                    placeholder="Jhon Doe"
+                                    placeholder="John Doe"
                                     className="max-w-xs mx-auto text-black dark:text-white"
                                     {...field}
                                 />

@@ -8,7 +8,7 @@ const ButtonLogin = () => {
     const router = useRouter();
     
     return (
-        <Button className="bg-blue-700 text-white" onClick={ () => router.push('/signin')}>
+        <Button className="bg-blue-700 text-white" onPress={ () => router.push('/signin')}>
             Sign In
         </Button>
     );
