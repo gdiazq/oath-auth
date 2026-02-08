@@ -61,7 +61,7 @@ export const FormSignIn = () => {
                                     <Input
                                         type="email"
                                         placeholder="email@example.com"
-                                        className="max-w-xs mx-auto text-black dark:text-white"
+                                        className="max-w-xs mx-auto bg-white/10 dark:bg-white/10 border-white/20 dark:border-white/20 text-white dark:text-white placeholder:text-white/50 dark:placeholder:text-white/50"
                                         {...field}
                                     />
                                 </FormControl>
@@ -79,7 +79,7 @@ export const FormSignIn = () => {
                                     <Input
                                         type="password"
                                         placeholder="Enter your password"
-                                        className="max-w-xs pt-2 mx-auto text-black dark:text-white"
+                                        className="max-w-xs pt-2 mx-auto bg-white/10 dark:bg-white/10 border-white/20 dark:border-white/20 text-white dark:text-white placeholder:text-white/50 dark:placeholder:text-white/50"
                                         {...field}
                                     />
                                 </FormControl>
